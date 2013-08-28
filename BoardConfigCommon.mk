@@ -174,20 +174,19 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
 	adbd.te \
-	file_contexts \
-	property_contexts \
-	te_macros \
+	app.te \
 	bluetooth_loader.te \
 	bridge.te \
 	camera.te \
-	conn_init.te \
 	device.te \
 	dhcp.te \
 	dnsmasq.te \
 	domain.te \
 	drmserver.te \
+	file_contexts \
 	file.te \
 	hostapd.te \
+	init_shell.te \
 	init.te \
 	libqc-opt.te \
 	mediaserver.te \
@@ -195,6 +194,7 @@ BOARD_SEPOLICY_UNION += \
 	netd.te \
 	netmgrd.te \
 	nfc.te \
+	property_contexts \
 	property.te \
 	qcom.te \
 	qmux.te \
@@ -203,9 +203,11 @@ BOARD_SEPOLICY_UNION += \
 	rmt.te \
 	sdcardd.te \
 	sensors.te \
+	shell.te \
 	surfaceflinger.te \
 	system.te \
 	tee.te \
+	te_macros \
 	thermald.te \
 	ueventd.te \
 	vold.te \
