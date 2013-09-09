@@ -25,5 +25,11 @@ ifeq ($(BOARD_VENDOR),motorola-msm8960)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8960)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
+
+LOCAL_COPY_HEADERS_TO := linux
+LOCAL_COPY_HEADERS := ../../../../$(TARGET_KERNEL_SOURCE)/include/linux/msm_kgsl.h
+#Copy the header to ensure libc2dcolorconvert is built
+include $(BUILD_COPY_HEADERS)
+
 endif
 endif
