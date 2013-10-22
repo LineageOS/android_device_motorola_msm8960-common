@@ -356,3 +356,11 @@ rm -f /data/misc/dhcp/*
 if grep ctrl_interface=wlan0 /data/misc/wifi/p2p_supplicant.conf > /dev/null; then
     rm -f /data/misc/wifi/p2p_supplicant.conf
 fi
+
+# Proximity Sensor Workaround
+case "$target" in
+     "msm8660")
+        echo 0 > /sys/module/ct406/parameters/prox_enable
+        echo 1 > /sys/module/ct406/parameters/prox_enable
+     ;;
+esac
