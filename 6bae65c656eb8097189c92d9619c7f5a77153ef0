@@ -16,6 +16,24 @@
       "revId": "6bae65c656eb8097189c92d9619c7f5a77153ef0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da85f559_f4d45648",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2013-12-09T11:49:45Z",
+      "side": 1,
+      "message": "Yes, should be chmod.",
+      "parentUuid": "da85f559_b1f7c0f4",
+      "revId": "6bae65c656eb8097189c92d9619c7f5a77153ef0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
