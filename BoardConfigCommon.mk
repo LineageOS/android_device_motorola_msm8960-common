@@ -75,6 +75,9 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 # Media
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
+# Use HW crypto for ODE
+TARGET_HW_DISK_ENCRYPTION := true
+
 # Custom relese tools
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8960-common
 
