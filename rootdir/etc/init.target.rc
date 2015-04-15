@@ -28,6 +28,10 @@
 #
 
 on early-init
+    write /sys/class/leds/red/brightness 30
+    write /sys/class/leds/green/brightness 60
+    write /sys/class/leds/blue/brightness 100
+
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
     mount debugfs debugfs /sys/kernel/debug
@@ -454,6 +458,7 @@ service atvc /system/bin/dbvc_atvc_property_set
     oneshot
 
 on property:sys.boot_completed=1
+    setprop sys.bootledblink 0
     start mmi-touch-sh
 
 service qdumpd /system/bin/qdumpd
@@ -662,3 +667,17 @@ service bugreport /system/bin/dumpstate -d -p -B \
     class main
     disabled
     oneshot
+
+on property:sys.bootledblink=0
+    #stop blinking led
+    write /sys/devices/platform/pm8xxx_rgb_leds/leds/red/blink "0 0 0 0"
+    write /sys/class/leds/red/brightness 0
+    write /sys/class/leds/green/brightness 0
+    write /sys/class/leds/blue/brightness 0
+
+on property:sys.bootledblink=1
+    #start blinking led
+    write /sys/devices/platform/pm8xxx_rgb_leds/leds/red/blink "800 200 1 1"
+
+on property:init.svc.bootanim="running"
+    setprop sys.bootledblink 1
