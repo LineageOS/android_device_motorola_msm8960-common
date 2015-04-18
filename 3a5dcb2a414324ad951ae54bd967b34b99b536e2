@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_573e2eb9",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 129
+      },
+      "writtenOn": "2015-04-18T10:39:48Z",
+      "side": 1,
+      "message": "pm8xxx_rgb_blink_store takes only 4 params. The fifth parameter is redundant.",
+      "revId": "3a5dcb2a414324ad951ae54bd967b34b99b536e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_774b325a",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 129
+      },
+      "writtenOn": "2015-04-18T10:39:48Z",
+      "side": 1,
+      "message": "same as above, the fifth argument is redundant.",
+      "revId": "3a5dcb2a414324ad951ae54bd967b34b99b536e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
