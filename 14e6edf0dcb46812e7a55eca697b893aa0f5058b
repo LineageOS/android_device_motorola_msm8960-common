@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_69aa62d6",
+        "filename": "doze/src/com/cyanogenmod/settings/device/MotoDozeService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 129
+      },
+      "writtenOn": "2015-05-21T03:41:09Z",
+      "side": 1,
+      "message": "mLastDisplayOff is no longer used",
+      "range": {
+        "startLine": 55,
+        "startChar": 17,
+        "endLine": 55,
+        "endChar": 32
+      },
+      "revId": "14e6edf0dcb46812e7a55eca697b893aa0f5058b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_89afa6e2",
+        "filename": "doze/src/com/cyanogenmod/settings/device/MotoDozeService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 129
+      },
+      "writtenOn": "2015-05-21T03:41:09Z",
+      "side": 1,
+      "message": "(mHandwaveGestureEnabled || mPocketGestureEnabled)",
+      "range": {
+        "startLine": 101,
+        "startChar": 16,
+        "endLine": 101,
+        "endChar": 39
+      },
+      "revId": "14e6edf0dcb46812e7a55eca697b893aa0f5058b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
