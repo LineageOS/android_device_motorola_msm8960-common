@@ -75,6 +75,9 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 # Media
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
+# CMHW
+BOARD_HARDWARE_CLASS += device/motorola/msm8960-common/cmhw
+
 # Custom relese tools
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8960-common
 
