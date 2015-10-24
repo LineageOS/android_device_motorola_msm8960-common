@@ -103,16 +103,3 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/motorola/msm8960-common/sepolicy
 
-# Device specific additions
-BOARD_SEPOLICY_UNION += \
-    aplogd.te \
-    atvc.te \
-    atvc_core.te \
-    batt_health.te \
-    bootmodem.te \
-    hw_revs.te \
-    mmi-boot-sh.te \
-    mmi-touch-sh.te \
-    platform_app.te \
-    qdumpd.te \
-    whisperd.te
