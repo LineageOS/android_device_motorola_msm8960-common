@@ -66,7 +66,16 @@ int main(int argc, char** argv)
 			next_is_output = 1;
 			continue;
 		}
-
+		if (!strcmp(argv[i], "-s"))
+		{
+			i++;
+			continue;
+		}
+		if (!strcmp(argv[i], "-p"))
+		{
+			i++;
+			continue;
+		}
 		if (next_is_output)
 		{
 			output_image = argv[i];
