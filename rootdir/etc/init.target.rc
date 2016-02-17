@@ -114,7 +114,7 @@ on fs
 
     # Mount PDS
     wait /dev/block/platform/msm_sdcc.1/by-name/pds
-    exec /system/bin/mount_pds.sh
+    start mountpds
 
     # Set correct permissions for HOB, DHOB, and CID Partitions Partitions
     exec /system/bin/chmod -L 660 /dev/block/platform/msm_sdcc.1/by-name/hob
@@ -125,7 +125,6 @@ on fs
     exec /system/bin/chown -L root:mot_dbvc /dev/block/platform/msm_sdcc.1/by-name/cid
 
     restorecon_recursive /persist
-    restorecon_recursive /pds
 
 on post-fs
 # Enable Cifs module
@@ -422,10 +421,10 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    disabled
 
 service whisperd /system/bin/whisperd /dev/ttyHS1
-    class core
     user mot_whisper
     group mot_whisper mot_pwric
     oneshot
+    disabled
 
 service qseecomd /system/bin/qseecomd
     class late_start
@@ -656,9 +655,14 @@ service mmi-ril-daemon /system/bin/rild
     user root
     group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log net_raw diag
 
-# bugreport
-service bugreport /system/bin/dumpstate -d -p -B \
-        -o /data/data/com.android.shell/files/bugreports/bugreport
-    class main
+service mountpds /system/bin/mount_pds.sh
+    user root
+    group root
     disabled
     oneshot
+
+on property:pds.ready=1
+    mount ext3 /dev/block/loop0 /pds rw
+    restorecon_recursive /pds
+    start whisperd
+
