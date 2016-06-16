@@ -34,8 +34,8 @@ on early-init
     write /sys/block/mmcblk0/queue/scheduler noop
 
 on init
-    # Preload the BoringSSL wrapper
-    export LD_PRELOAD "/system/lib/libboringssl-compat.so /system/lib/libmoto_log.so"
+    # Symbols required for Motorola blobs
+    export LD_SHIM_LIBS "/system/vendor/lib/libgsl.so|libboringssl-compat.so:/system/lib/liblog.so|libmoto_log.so:/system/lib/libril.so|libshim_ril.so:/system/lib/libmdmcutback.so|libshim_mdmcutback.so"
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system

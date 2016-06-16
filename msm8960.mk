@@ -52,6 +52,11 @@ PRODUCT_PACKAGES += \
 # WIFI
 PRODUCT_PACKAGES += wcnss_service
 
+# RIL
+PRODUCT_PACKAGES += \
+    libshim_ril \
+    libshim_mdmcutback
+
 # Symlinks
 PRODUCT_PACKAGES += \
     mbhc.bin \
