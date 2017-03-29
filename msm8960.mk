@@ -125,10 +125,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Audio configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf
-
 # Charger mode setup
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/moto_com.sh:system/bin/moto_com.sh
@@ -169,7 +165,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qmienabled=true \
     persist.fuse_sdcard=true \
     ro.crypto.fuse_sdcard=true \
-    ro.qc.sdk.audio.fluencetype=fluence \
     ro.hdmi.enable=true
 
 # Opengles version 2
