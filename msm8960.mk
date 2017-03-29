@@ -125,10 +125,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Audio configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf
-
 # Charger mode setup
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/moto_com.sh:system/bin/moto_com.sh
