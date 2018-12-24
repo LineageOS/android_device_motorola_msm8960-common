@@ -57,7 +57,6 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/MotorolaQualcommRIL.java
 
 # WiFi
-TARGET_USES_WCNSS_CTRL := true
 
 WLAN_MODULES:
 	mkdir -p $(KERNEL_MODULES_OUT)/prima
